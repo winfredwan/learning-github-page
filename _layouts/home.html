@@ -1,0 +1,12 @@
+--- layout: default ---
+{%- if page.title -%}
+{{ page.title }}
+
+{%- endif -%} {{ content }} {%- if site.posts.size > 0 -%}
+{{ page.list_title | default: "Home" }}
+
+
+{%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+{%- endfor -%}
+
+{%- endif -%}
